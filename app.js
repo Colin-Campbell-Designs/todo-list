@@ -72,12 +72,14 @@ clear.addEventListener('click', () => {
 
 list.addEventListener('click', e => {
 
-    if(e.target.classList.contains('delete'));
-    e.target.parentElement.parentElement.remove();
-    counter --;
-    count.textContent = counter
-
-
+    if(e.target.parentElement.classList.contains('delete')){
+        e.target.parentElement.parentElement.remove();
+        counter --;
+        count.textContent = counter
+        console.log('yes')
+    }else {
+        console.log('no')
+    }
 })
  
 
